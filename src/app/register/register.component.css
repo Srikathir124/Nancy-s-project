@@ -1,0 +1,45 @@
+h2{
+    text-align: center;
+}
+p{
+    color: red;
+    font-weight: 500;
+    text-align: center;
+}
+.registrationContainer{
+    position: fixed;
+    top:8%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    padding: 2%;
+}
+mat-form-field{
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+}
+button{
+    font-size: medium;
+}
+button:hover{
+    font-weight: 600;
+}
+    .backButton{
+        position: absolute;
+        left: 5%;
+    }
+    .submitButton{
+        position: absolute;
+        left: 47%;
+        background-color: green;
+        color: white;
+    }
+    .resetButton{
+        position: absolute;
+        left: 47%;
+        color: orangered;
+    }
+span{
+    color: orange;
+}

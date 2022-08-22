@@ -1,0 +1,62 @@
+
+<body>
+    <div *ngIf="this.app.sessionStarted(); else invalidLogin" class="filters">
+        <form>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Associate Dept</mat-label>
+                <input matInput  name="dept" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Associate Level</mat-label>
+                <input matInput name="level" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>SGA</mat-label>
+                <input matInput name="sga" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Area</mat-label>
+                <input matInput name="area" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Leader</mat-label>
+                <input matInput name="leader" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Initiative</mat-label>
+                <input matInput name="initiative" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Location</mat-label>
+                <input matInput name="location" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Account</mat-label>
+                <input matInput  name="account" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Vertical</mat-label>
+                <input matInput  name="vertical" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Descrepany Report 1</mat-label>
+                <input matInput  name="dr1" />
+            </mat-form-field>
+            <mat-form-field  class="filter"  appearance="fill">
+                <mat-label>Descrepany Report 2</mat-label>
+                <input matInput  name="dr2" />
+            </mat-form-field>
+            <mat-radio-group name="radio" [(ngModel)]="radio">
+                <mat-radio-button name="base only" value="base only">CoE Associates in Base Sheet Only</mat-radio-button>
+                <mat-radio-button name="master only" value="master only">CoE Associates in Master Sheet Only</mat-radio-button>
+            </mat-radio-group>
+            <mat-checkbox name="diff" class="filter" [(ngModel)]="checked">CoE Associates with different HCM as compared to Master</mat-checkbox>
+            <button mat-raised-button class="searchButton">Search</button>
+            <button mat-raised-button class="resetButton" type="reset">Reset</button>
+        </form>
+    </div>
+    <ng-template #invalidLogin>
+        <p>You are not logged in.</p>
+        <p>Please login to continue.</p>
+    </ng-template>
+</body>

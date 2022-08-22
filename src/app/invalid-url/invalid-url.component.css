@@ -1,0 +1,11 @@
+.invalidUrlContainer{
+    position: absolute;
+    top:15%;
+    left:43%;
+}
+a{
+    color: blue;
+}
+a:hover{
+    color: blueviolet;
+}

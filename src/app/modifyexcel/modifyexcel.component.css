@@ -1,0 +1,19 @@
+.updateExcelContainer{
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    bottom: 0%;
+    right: 0%;
+}
+p,h2{
+    text-align: center;
+    margin-top: 2%;
+}
+label{
+    margin-left: 17%;
+    background-color: green;
+    color:white;
+    padding: 1%;
+    border-radius: 5%;
+    box-shadow: 5px 5px 1px 1px gainsboro
+}

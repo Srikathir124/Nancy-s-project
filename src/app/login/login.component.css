@@ -1,0 +1,33 @@
+.loginContainer{
+    position: absolute;
+    top: 10%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+mat-form-field{
+    display: block;
+    width: 40%;
+    margin-left: 30%;
+}
+button{
+    position: relative;
+    font-size: medium;
+    background-color: green;
+    color: white;
+    margin-left: 48%;
+}
+button:hover{
+    background-color: rgb(13, 88, 13);
+    border: 2px solid rgb(0, 26, 0);
+}
+h2{
+    text-align: center;
+    font-size:x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2%;
+}
+p{
+    color: red;
+    text-align: center;
+}

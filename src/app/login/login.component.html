@@ -1,0 +1,16 @@
+<div class="loginContainer">
+    <h2>Login Here</h2>
+    <form class="fields">
+        <mat-form-field class="view" appearance="fill">
+            <mat-label>User ID</mat-label>
+            <input (focusout)="userIdValidation()" matInput [(ngModel)]="userid" name="formid" required/>
+        </mat-form-field>
+        <p>{{userIdErrorMessage}}</p>
+        <mat-form-field class="view" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input (focusout)="passwordValidation()" matInput type="password" [(ngModel)]="password" name = "password" required/>
+        </mat-form-field>
+        <p>{{passwordErrorMessage}}</p>
+        <button mat-raised-button  (click)="getHomePage()">Login</button>
+    </form>
+</div>

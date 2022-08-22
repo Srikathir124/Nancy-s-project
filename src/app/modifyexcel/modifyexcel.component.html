@@ -1,0 +1,14 @@
+<div class="updateExcelContainer">
+    <div *ngIf="this.app.getRoleID()==='1';else invalidLogin">
+        <h2>Update Details</h2>
+        <label for="baseSheetButton">Update Base Sheet</label>
+        <input id="baseSheetButton" style="visibility: hidden;" type="file" (change)="baseSheetValidation($event)" multiple="false"/>
+
+        <label for="masterSheetButton">Update Master Sheet</label>
+        <input id="masterSheetButton" style="visibility: hidden;" type="file" (change)="masterSheetValidation($event)" multiple="false"/>
+    </div>
+    <ng-template #invalidLogin>
+        <h2>You are not authorized to this page.</h2>
+        <p>Please login as admin to continue.</p>
+    </ng-template>
+</div>

@@ -1,0 +1,109 @@
+body{
+  background-color: antiquewhite;
+}
+.toolbar{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 8%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  background-color: #000048;
+  color: white;
+}
+  .logo{
+    display: inline;
+    position: relative;
+    height: 25px;
+    left: 20%;
+    top: 10px;
+  }
+  .title{
+    display: inline;
+    position: relative;
+    left: 125%;
+    top: 5px;;
+  }
+.sidemenu{
+  position: fixed;
+  top:8%;
+  width: 20%;
+  height: 100%;
+  background-color: #ddddf9;
+}
+label{
+  display: block;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+ label:hover{
+   text-decoration: underline;
+ }
+::ng-deep .greenSnackBar{
+  color: honeydew;
+  background-color: rgb(3, 182, 33);
+  position: relative;
+  left: 25%;
+}
+::ng-deep .redSnackBar{
+  color: floralwhite;
+  background-color: rgb(255, 94, 0);
+  position: relative;
+  left: 25%;
+}
+.registerButton{
+  position: absolute;
+  right: 10%;
+  background-color: gray;
+}
+.rightsideoptions{
+  display: contents;
+}
+.profile{
+  display: flex;
+  position: absolute;
+  right: 12%;
+}
+.profileicon{
+  align-self: center;
+  margin-right: 12px;
+  height: 32px;
+}
+.logoutButton{
+  position: absolute;
+  right: 5%;
+  background-color: red;
+}
+  button:hover{
+    font-weight: bolder;
+  }
+p{
+  margin-bottom: 1%;
+}
+.userid{
+  color: gold;
+  font-size: 16px;
+  font-weight: 700;
+}
+.role{
+  color: orange;
+  font-size:16px;
+  font-weight: 700;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 40%;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }

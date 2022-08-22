@@ -1,0 +1,35 @@
+<div class="registrationContainer">
+    <h2>
+        <button mat-raised-button class="backButton" (click)="getLoginPage()">Back</button>
+        Register New User
+    </h2>
+    <p>{{errorMessage}}</p><br>
+    <form class="fields">
+        <mat-form-field class="view" appearance="fill">
+            <mat-label>UserID<span>*</span></mat-label>
+            <input matInput name="formid" [(ngModel)]="userid" 
+            (focusout)="userIdValidation()" maxlength=""/>
+        </mat-form-field>
+        <p>{{userIdErrorMessage}}</p>
+        <mat-form-field class="view" appearance="fill">
+            <mat-label>Password<span>*</span></mat-label>
+            <input matInput (focusout)="passwordValidation()" type="password" [(ngModel)]="password" name = "password"/>
+        </mat-form-field>
+        <p>{{passwordErrorMessage}}</p>
+        <mat-form-field class="view" appearance="fill">
+            <mat-label>Re-Type Password<span>*</span></mat-label>
+            <input matInput (focusout)="passwordValidation()" type="password" [(ngModel)]="password2" name = "password2"/>
+        </mat-form-field>
+        <p>{{password2ErrorMessage}}</p>
+        <mat-form-field appearance="fill">
+            <mat-label>Role<span>*</span></mat-label>
+            <mat-select [(value)] = "roleid">
+                <mat-option value=1>Admin</mat-option>
+                <mat-option value=2>User</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <p>{{roleErrorMessage}}</p>
+    <button mat-raised-button class="submitButton" (click)="registerNewUser()">Submit</button><br><br>
+    <button mat-raised-button class="resetButton" (click)="resetForm()">Reset</button><br><br>
+    </form>
+</div>

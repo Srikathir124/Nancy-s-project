@@ -1,0 +1,17 @@
+div{
+    position: absolute;
+    top: 15%;
+    left:20%;
+}
+button{
+    background-color: #0000ffc4;
+    font-size: larger;
+    font-weight: 600;
+}
+a{
+    color:blue;
+}
+a:hover{
+    color: purple;
+    opacity: 70%;
+}

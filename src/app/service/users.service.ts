@@ -7,7 +7,6 @@ import { Injectable } from '@angular/core';
 export class UsersService {
 
   private baseUrl :string = "http://localhost:8080/";
- // private baseUrl :string = "http://localhost:8084/AllocationApp/";
   constructor(
     private httpClient: HttpClient
   ) { }
@@ -27,6 +26,18 @@ export class UsersService {
     );
   }
 
+  getBaseData(){
+    return this.httpClient.get(
+      this.baseUrl+"get-basedata"
+    );
+  }
+
+  logDownload(log:string):void{
+    this.httpClient.post(
+      this.baseUrl+"log-download",
+      log
+    ).subscribe();
+  }
 }
 
 export class User{

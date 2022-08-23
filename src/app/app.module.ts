@@ -20,6 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { ModifyexcelComponent } from './modifyexcel/modifyexcel.component';
+import { DownloadtrackerComponent } from './downloadtracker/downloadtracker.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ModifyexcelComponent } from './modifyexcel/modifyexcel.component';
     HomeComponent,
     InvalidUrlComponent,
     RegisterComponent,
-    ModifyexcelComponent
+    ModifyexcelComponent,
+    DownloadtrackerComponent
   ],
   imports: [
     BrowserModule,

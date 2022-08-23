@@ -25,4 +25,10 @@ export class AdminService {
       masterData
       );
   }
+
+  getDownloadLogs(){
+    return this.httpClient.get<string[]>(
+      this.baseUrl+"get-download-logs"
+    );
+  }
 }

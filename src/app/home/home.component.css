@@ -1,26 +1,40 @@
-body{
-    position: absolute;
-    top: 5%;
+form{
+    position: fixed;
+    top:5%;
     left: 20%;
-    padding: 2%;
-    font-weight: bold;
+    right: 0%;
+    padding:2%;
+}
+table{
+    position: absolute;
+    top:60%;
+    left:22%;
+    margin-top: 20px;
+    border: 1px solid;
+    border-collapse: collapse;background-color: antiquewhite;
 }
 .filter{
     margin-right: 1%;
-    width: 15%;
+    width: 240px;
 }
 mat-radio-button{
-    margin-right: 20%;
+    margin-right: 20px;
 }
 mat-checkbox{
     display: block;
 }
 .searchButton{
-    background-color: green;
-    margin-top: 2%;
-    margin-right: 20%;
-    margin-left: 30%;
+    background-color: goldenrod;
+    margin-top: 2px;
+    margin-right: 20px;
+    margin-left: 30px;
 }
 .resetButton{
-    background-color: goldenrod;
+    margin-right: 20px;
+}
+.downloadButton{
+    background-color: green;
+}
+th,td{
+ border:1px solid;   
 }

@@ -54,6 +54,9 @@ export class AppComponent {
   getUpdateExcelPage(){
     this.router.navigate(['updateexcel']);
   }
+  getDownloadTrackerPage(){
+    this.router.navigate(['downloadtracker']);
+  }
 
   sessionStarted():boolean{
     if(localStorage.getItem('UserID')!=null){return true;}

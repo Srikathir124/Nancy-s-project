@@ -23,7 +23,7 @@
 <div class="sidemenu" *ngIf="sessionStarted()">
   <label #userpage (click)="getUserPage();">View Allocation Details</label>
   <label #adminpage *ngIf="getRoleID()==='1'" (click)="getUpdateExcelPage()" >Modify Allocation Details</label>
-  <label #tracker *ngIf="getRoleID()==='1'">DownloadTracker</label>
+  <label #tracker *ngIf="getRoleID()==='1'" (click)="getDownloadTrackerPage()">DownloadTracker</label>
 </div>
 
 <footer *ngIf="!sessionStarted()">

@@ -1,7 +1,7 @@
-
 <body>
     <div *ngIf="this.app.sessionStarted(); else invalidLogin" class="filters">
-        <form>
+        <form class="filters">
+            <div class="firstline">
             <mat-form-field  class="filter"  appearance="fill">
                 <mat-label>Associate Dept</mat-label>
                 <input matInput  name="dept" />
@@ -18,6 +18,8 @@
                 <mat-label>Area</mat-label>
                 <input matInput name="area" />
             </mat-form-field>
+            </div>
+            <div class="secondline">
             <mat-form-field  class="filter"  appearance="fill">
                 <mat-label>Leader</mat-label>
                 <input matInput name="leader" />
@@ -34,6 +36,8 @@
                 <mat-label>Account</mat-label>
                 <input matInput  name="account" />
             </mat-form-field>
+            </div>
+            <div class="thirdline">
             <mat-form-field  class="filter"  appearance="fill">
                 <mat-label>Vertical</mat-label>
                 <input matInput  name="vertical" />
@@ -46,14 +50,98 @@
                 <mat-label>Descrepany Report 2</mat-label>
                 <input matInput  name="dr2" />
             </mat-form-field>
+            </div>
+            <div>
             <mat-radio-group name="radio" [(ngModel)]="radio">
                 <mat-radio-button name="base only" value="base only">CoE Associates in Base Sheet Only</mat-radio-button>
                 <mat-radio-button name="master only" value="master only">CoE Associates in Master Sheet Only</mat-radio-button>
             </mat-radio-group>
             <mat-checkbox name="diff" class="filter" [(ngModel)]="checked">CoE Associates with different HCM as compared to Master</mat-checkbox>
+            </div>
             <button mat-raised-button class="searchButton">Search</button>
             <button mat-raised-button class="resetButton" type="reset">Reset</button>
+            <button mat-raised-button class="downloadButton" (click)="downloadExcel()">Download</button>
         </form>
+        <table>
+            <th *ngFor="let column of baseColumns">
+                {{column}}
+            </th>
+            <tr *ngFor="let baseData of baseDataList">
+                <td>{{baseData.srNo}}</td>
+                <td>{{baseData.associateID}}</td>
+                <td>{{baseData.associateName}}</td>
+                <td>{{baseData.gradeHR}}</td>
+                <td>{{baseData.associateDept}}</td>
+                <td>{{baseData.onOff}}</td>
+                <td>{{baseData.homeManagerID}}</td>
+                <td>{{baseData.hCMName}}</td>
+                <td>{{baseData.hCMDept}}</td>
+                <td>{{baseData.area}}</td>
+                <td>{{baseData.leader}}</td>
+                <td>{{baseData.sGA}}</td>
+                <td>{{baseData.projectID}}</td>
+                <td>{{baseData.projectDescription}}</td>
+                <td>{{baseData.percentAllocation}}</td>
+                <td>{{baseData.fTE}}</td>
+                <td>{{baseData.costforSGA}}</td>
+                <td>{{baseData.currentStatusforSGA}}</td>
+                <td>{{baseData.assignmentStartDate}}</td>
+                <td>{{baseData.dateofJoining}}</td>
+                <td>{{baseData.fINDepartmentID}}</td>
+                <td>{{baseData.departmentName}}</td>
+                <td>{{baseData.projectBillability}}</td>
+                <td>{{baseData.projectType}}</td>
+                <td>{{baseData.projectStatus}}</td>
+                <td>{{baseData.project_Solution_Type}}</td>
+                <td>{{baseData.projectManagerID}}</td>
+                <td>{{baseData.projectManagerName}}</td>
+                <td>{{baseData.accountID}}</td>
+                <td>{{baseData.accountName}}</td>
+                <td>{{baseData.parentCustomer}}</td>
+                <td>{{baseData.poolID}}</td>
+                <td>{{baseData.poolDescription}}</td>
+                <td>{{baseData.jobCode}}</td>
+                <td>{{baseData.designation}}</td>
+                <td>{{baseData.grade}}</td>
+                <td>{{baseData.associateBaseHiringLocation}}</td>
+                <td>{{baseData.hCMSetID}}</td>
+                <td>{{baseData.projectOwningDepartment}}</td>
+                <td>{{baseData.projectOwningPractice}}</td>
+                <td>{{baseData.verticalBillabilityStatus}}</td>
+                <td>{{baseData.primaryStateTag}}</td>
+                <td>{{baseData.assignmentID}}</td>
+                <td>{{baseData.sOID}}</td>
+                <td>{{baseData.sOLine}}</td>
+                <td>{{baseData.criticalFlag}}</td>
+                <td>{{baseData.locationID}}</td>
+                <td>{{baseData.sEZFlag}}</td>
+                <td>{{baseData.country}}</td>
+                <td>{{baseData.state}}</td>
+                <td>{{baseData.city}}</td>
+                <td>{{baseData.assignmentEndDate}}</td>
+                <td>{{baseData.assignmentStatus}}</td>
+                <td>{{baseData.projectRole}}</td>
+                <td>{{baseData.operationalRole}}</td>
+                <td>{{baseData.assignmentlocation}}</td>
+                <td>{{baseData.assgnCity}}</td>
+                <td>{{baseData.assgnState}}</td>
+                <td>{{baseData.assgnCountry}}</td>
+                <td>{{baseData.locationReasoncode}}</td>
+                <td>{{baseData.projectStartDate}}</td>
+                <td>{{baseData.projectEndDate}}</td>
+                <td>{{baseData.subVertical}}</td>
+                <td>{{baseData.sBU1}}</td>
+                <td>{{baseData.sBU2}}</td>
+                <td>{{baseData.contractorEndDate}}</td>
+                <td>{{baseData.comment}}</td>
+                <td>{{baseData.poolResource}}</td>
+                <td>{{baseData.competency}}</td>
+                <td>{{baseData.secondaryStateTag}}</td>
+                <td>{{baseData.replacedEmployee}}</td>
+                <td>{{baseData.comments}}</td>
+                <td>{{baseData.clientFacility}}</td>
+            </tr>
+        </table>
     </div>
     <ng-template #invalidLogin>
         <p>You are not logged in.</p>

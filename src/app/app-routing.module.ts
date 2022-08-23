@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ModifyexcelComponent } from './modifyexcel/modifyexcel.component';
+import { DownloadtrackerComponent } from './downloadtracker/downloadtracker.component';
 
 const routes: Routes = [
   {path:'',component:WelcomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'home',component: HomeComponent},
   {path:'register',component:RegisterComponent},
   {path:'updateexcel',component:ModifyexcelComponent},
+  {path:'downloadtracker',component:DownloadtrackerComponent},
   {path:'**',component:InvalidUrlComponent}
 ];
 

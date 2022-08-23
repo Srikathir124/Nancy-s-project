@@ -54,7 +54,7 @@ export class HomeComponent {
     'Project Status',	'Project_Solution_Type',	'Project Manager ID',	'Project Manager Name',	'Account ID',
     'Account Name',	'Parent Customer',	'Pool ID',	'Pool Description',	'JobCode',	'Designation',
     'Grade',	'Associate Base Hiring Location',	'HCM SetID',	'Project Owning Department',
-    'Project Owning Practice',	'Vertical	Billability Status',	'Primary State Tag',  'Assignment ID',
+    'Project Owning Practice',	'Vertical',	'Billability Status',	'Primary State Tag',  'Assignment ID',
     'SO ID',	'SO Line',	'Critical Flag',	'Location ID',	'SEZ Flag',	'Country',	'State',	'City',
     'Assignment End Date',	'Assignment Status',	'Project Role',	'Operational Role',	'Assignment location',
     'Assgn City',	'Assgn State',	'Assgn Country',	'Location Reason code',	'Project Start Date',

@@ -2,8 +2,6 @@ package adminServices;
 
 import java.util.ArrayList;
 
-import org.springframework.stereotype.Component;
-
 import userServices.DbConnection;
 
 public class AdminServices {
@@ -24,5 +22,15 @@ public class AdminServices {
 		}
 		catch (Exception e) {e.printStackTrace();}
 		finally {dbConnection.closeDbConnection();}
+	}
+	
+	public ArrayList<String> getDownloadLogs(){
+		DbConnection dbConnection = new DbConnection();
+		try {
+			return dbConnection.getDownloadLogs();
+		}
+		catch (Exception e) {e.printStackTrace();}
+		finally {dbConnection.closeDbConnection();}
+		return null;
 	}
 }

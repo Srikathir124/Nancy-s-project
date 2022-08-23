@@ -1,5 +1,7 @@
 package com.cognizant.AllocationApp;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import adminServices.BaseData;
 import userServices.Credentials;
 import userServices.User;
 import userServices.UserServices;
@@ -40,6 +42,17 @@ public class UserServicesController {
 		System.out.println("Received login request");
 		User response = userService.authenticate(cred.getUserId(),cred.getPassword());
 		return response;
+	}
+	
+	@PostMapping("log-download")
+	void logDownload(@RequestBody String log) {
+		userService.logDownload(log);
+	}
+	
+	@GetMapping("get-basedata")
+	ArrayList<BaseData> getBaseData(){
+		System.out.println("Received Get BaseData Request");
+		return userService.getBaseData();
 	}
 	
 }

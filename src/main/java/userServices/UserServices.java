@@ -1,6 +1,10 @@
 package userServices;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Component;
+
+import adminServices.BaseData;
 
 @Component
 public class UserServices {
@@ -38,6 +42,25 @@ public class UserServices {
 		catch (Exception e) {e.printStackTrace();}
 		finally {dbc.closeDbConnection();}
 		return new User("Error Occcured");
+	}
+	
+	public ArrayList<BaseData> getBaseData() {
+		DbConnection dbConnection = new DbConnection();
+		try {
+			return dbConnection.getBaseData();
+		}
+		catch (Exception e) {e.printStackTrace();}
+		finally {dbConnection.closeDbConnection();}
+		return null;
+	}
+	
+	public void logDownload(String log) {
+		DbConnection dbc = new DbConnection();
+		try {
+			dbc.logDownload(log);
+		}
+		catch (Exception e) {e.printStackTrace();}
+		finally {dbc.closeDbConnection();}
 	}
 	
 }

@@ -221,7 +221,7 @@ public class DbConnection {
 				bd.setAccountID(rs.getString("Account ID"));
 				bd.setAccountName(rs.getString("Account Name"));
 				bd.setParentCustomer(rs.getString("Parent Customer"));
-				bd.setPoolDescription(rs.getString("Pool ID"));
+				bd.setPoolID(rs.getString("Pool ID"));
 				bd.setPoolDescription(rs.getString("Pool Description"));
 				bd.setJobCode(rs.getString("JobCode"));
 				bd.setDesignation(rs.getString("Designation"));

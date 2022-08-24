@@ -58,11 +58,10 @@
             </mat-radio-group>
             <mat-checkbox name="diff" class="filter" [(ngModel)]="checked">CoE Associates with different HCM as compared to Master</mat-checkbox>
             </div>
-            <button mat-raised-button class="searchButton">Search</button>
+            <button mat-raised-button class="searchButton" (click)="loadBaseData()">Search</button>
             <button mat-raised-button class="resetButton" type="reset">Reset</button>
-            <button mat-raised-button class="downloadButton" (click)="downloadExcel()">Download</button>
         </form>
-        <table>
+        <table *ngIf="downloadFlag">
             <th *ngFor="let column of baseColumns">
                 {{column}}
             </th>
@@ -143,6 +142,7 @@
                 <td>{{baseData.ClientFacility}}</td>
             </tr>
         </table>
+        <button mat-raised-button class="downloadButton" (click)="downloadExcel()" *ngIf="downloadFlag">Download</button>
     </div>
     <ng-template #invalidLogin>
         <p>You are not logged in.</p>

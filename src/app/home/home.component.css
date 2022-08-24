@@ -33,7 +33,11 @@ mat-checkbox{
     margin-right: 20px;
 }
 .downloadButton{
+    position: fixed;
+    top:50%;
+    left:80%;
     background-color: green;
+    color: white;
 }
 th,td{
  border:1px solid;   

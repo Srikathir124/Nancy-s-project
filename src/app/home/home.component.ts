@@ -17,13 +17,14 @@ export class HomeComponent {
     protected app: AppComponent,
     protected service: UsersService
   ) {
-    this.preloadBaseData();
+    this.downloadFlag=false;
     this.app.setViewingPage('userpage');
   }
 
   checked:boolean = false;
   radio:string = '';
   baseDataList:any;
+  downloadFlag:boolean=false;
 
   public downloadExcel(): void {
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.baseDataList,);
@@ -35,7 +36,7 @@ export class HomeComponent {
     this.service.logDownload(this.app.getUserID()+' downloaded on '+ new Date());
   }
 
-  preloadBaseData():void{
+  loadBaseData():void{
     this.service.getBaseData().subscribe({
       next:(value:any)=>{
         this.baseDataList=value;
@@ -45,6 +46,7 @@ export class HomeComponent {
         this.app.openSnackBar("Unable to load Table Data","redSnackBar");
       }
     });
+    this.downloadFlag=true;
   }
 
   baseColumns:string[] = ['Sr.No.', 'Associate ID',	'Associate Name',	'Grade HR',	'Associate Dept',
